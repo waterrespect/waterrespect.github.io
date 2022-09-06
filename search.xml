@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>ubuntu</title>
+      <link href="/2022/09/06/ubuntu/"/>
+      <url>/2022/09/06/ubuntu/</url>
+      
+        <content type="html"><![CDATA[<p>一些ubuntu问题</p><span id="more"></span><p>1、防火墙</p><p><a href="https://blog.csdn.net/weixin_43322048/article/details/106749954">解决云服务器添加了安全组端口无法访问问题_L_Sueno的博客-CSDN博客</a></p><p>2、github ubuntu 账户密码</p><p><a href="https://www.cnblogs.com/ericli-ericli/p/7780167.html">Linux下Git安装、配置 - Eric-Lee - 博客园 (cnblogs.com)</a></p><pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;wang&quot;git config --global user.email Gahulv@outlook.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h4><pre class="line-numbers language-none"><code class="language-none">mkdir gitDocDir(此为名称，可随意)PWD &#x2F;&#x2F;命令用于显示当前目录。git init<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h4 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h4><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;Gahulv@outlook.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">一般public key是在~&#x2F;.ssh&#x2F;id_rsa.pub,而private key是~&#x2F;.ssh&#x2F;id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>验证是否成功链接</strong></p><pre class="line-numbers language-none"><code class="language-none">ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>3、hexo部署</p><p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">hexo史上最全搭建教程_zjufangzh的博客-CSDN博客_hexo</a></p><p>4、</p><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;waterrespect.github.io&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>5、theme</p><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;github.com&#x2F;auroral-ui&#x2F;hexo-theme-aurora<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>6、配置</p><pre class="line-numbers language-none"><code class="language-none"># Headermenu:  主页: &#x2F;  工具: &#x2F;tags&#x2F;工具&#x2F;# SubNavsubnav:  github: &quot;https:&#x2F;&#x2F;github.com&#x2F;waterrespect&quot;  weibo: &quot;#&quot;  rss: &quot;#&quot;  zhihu: &quot;#&quot;  #qq: &quot;#&quot;  #weixin: &quot;#&quot;  #jianshu: &quot;#&quot;  #douban: &quot;#&quot;  #segmentfault: &quot;#&quot;  #bilibili: &quot;#&quot;  #acfun: &quot;#&quot;  #mail: &quot;mailto:litten225@qq.com&quot;  #facebook: &quot;#&quot;  #google: &quot;#&quot;  #twitter: &quot;#&quot;  #linkedin: &quot;#&quot;rss: &#x2F;atom.xml# 是否需要修改 root 路径# 如果您的网站存放在子目录中，例如 http:&#x2F;&#x2F;yoursite.com&#x2F;blog，# 请将您的 url 设为 http:&#x2F;&#x2F;yoursite.com&#x2F;blog 并把 root 设为 &#x2F;blog&#x2F;。root: # Content# 文章太长，截断按钮文字excerpt_link: more# 文章卡片右下角常驻链接，不需要请设置为falseshow_all_link: &#39;展开全文&#39;# 数学公式mathjax: false# 是否在新窗口打开链接open_in_new: false# 打赏# 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏reward_type: 0# 打赏wordingreward_wording: &#39;谢谢&#39;# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：&#x2F;assets&#x2F;img&#x2F;alipay.jpgalipay: # 微信二维码图片地址weixin: # 目录# 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录toc: 1# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为falsetoc_hide_index: true# 目录为空时的提示toc_empty_wording: &#39;目录，不存在的…&#39;# 是否有快速回到顶部的按钮top: true# Miscellaneousbaidu_analytics: &#39;&#39;google_analytics: &#39;&#39;favicon: &#x2F;favicon.png#你的头像urlavatar:#是否开启分享share_jia: true#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus；5、Gitment#不需要使用某项，直接设置值为false，或注释掉#具体请参考wiki：https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia&#x2F;wiki&#x2F;#1、多说duoshuo: false#2、网易云跟帖wangyiyun: false#3、畅言changyan_appid: falsechangyan_conf: false#4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的disqus: false#5、Gitmentgitment_owner: false      #你的 GitHub IDgitment_repo: &#39;&#39;          #存储评论的 repogitment_oauth:  client_id: &#39;&#39;           #client ID  client_secret: &#39;&#39;       #client secret# 样式定制 - 一般不需要修改，除非有很强的定制欲望…style:  # 头像上面的背景颜色  header: &#39;#4d4d4d&#39;  # 右滑板块背景  slider: &#39;linear-gradient(200deg,#a0cfe4,#e8c37e)&#39;# slider的设置slider:  # 是否默认展开tags板块  showTags: true# 智能菜单# 如不需要，将该对应项置为false# 比如#smart_menu:#  friends: truesmart_menu:  innerArchive: &#39;所有文章&#39;  friends: &#39;友链&#39;  aboutme: &#39;关于我&#39;friends:  友情链接1: http:&#x2F;&#x2F;localhost:4000&#x2F;  友情链接2: http:&#x2F;&#x2F;localhost:4000&#x2F;  友情链接3: http:&#x2F;&#x2F;localhost:4000&#x2F;  友情链接4: http:&#x2F;&#x2F;localhost:4000&#x2F;  友情链接5: http:&#x2F;&#x2F;localhost:4000&#x2F;  友情链接6: http:&#x2F;&#x2F;localhost:4000&#x2F;aboutme: <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>7、github图片</p><pre class="line-numbers language-none"><code class="language-none">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<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://raw.githubusercontent.com/waterrespect/the_picture/main/img/202209051723147.png" alt="image-20220905172322373"></p><pre class="line-numbers language-none"><code class="language-none">jsonContent:    meta: false    pages: false    posts:      title: true      date: true      path: true      text: false      raw: false      content: false      slug: false      updated: false      comments: false      link: false      permalink: false      excerpt: false      categories: false      tags: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 问题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模板</title>
+      <link href="/2022/09/05/%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2022/09/05/%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<p>菜鸟: <a href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p><span id="more"></span><p>前置信息:<br>title:<br>date:<br>tags:</p><ul><li>**</li><li>**<br>隐藏需加 &lt; ! - - more - - &gt;</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+            <tag> 链接 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链接</title>
+      <link href="/2022/09/05/%E9%93%BE%E6%8E%A5/"/>
+      <url>/2022/09/05/%E9%93%BE%E6%8E%A5/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/09/05/hello-world/"/>
+      <url>/2022/09/05/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
