@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-10-31T15:51:29.729Z</updated>
+  <updated>2023-11-29T16:00:16.190Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>clash</title>
+    <link href="http://example.com/2023/11/30/Clash/"/>
+    <id>http://example.com/2023/11/30/Clash/</id>
+    <published>2023-11-29T16:00:16.166Z</published>
+    <updated>2023-11-29T16:00:16.190Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name clash --restart=always --log-opt max-size=1m -v /home/Clash/clash.yaml:/root/.config/clash/config.yaml -p 7888:8080 -p 7890:7890 laoyutang/clash-and-dashboard:latest</span><br></pre></td></tr></table></figure><h2 id="config-yaml"><a href="#config-yaml" class="headerlink" title="config.yaml"></a>config.yaml</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">port: 7890</span><br><span class="line">socks-port: 7891</span><br><span class="line">#转发端口一定要配置</span><br><span class="line">redir-port: 7892</span><br><span class="line">#允许接管局域网流量</span><br><span class="line">allow-lan: true</span><br><span class="line">#默认代理模式</span><br><span class="line">mode: Rule</span><br><span class="line">log-level: warning</span><br><span class="line">#接口控制端口你可以自己设置，默认是9090</span><br><span class="line">external-controller: 0.0.0.0:7070</span><br><span class="line">#如果服务器对公网开放可以设置密码</span><br><span class="line">secret: &quot;&quot;</span><br><span class="line">#external-ui: dashboard</span><br><span class="line">#配置由clash接管的dns解析</span><br><span class="line">dns:</span><br><span class="line">  enable: true</span><br><span class="line">#主要监听定向转发来的数据，后续会在路由表里配置转发端口为1053</span><br><span class="line">  listen: 0.0.0.0:1053</span><br><span class="line">  enhanced-mode: redir-host</span><br><span class="line">#见下方链接</span><br><span class="line">  nameserver:</span><br><span class="line">    - &#x27;114.114.114.114&#x27;</span><br><span class="line">    - &#x27;223.5.5.5&#x27;</span><br><span class="line">  fallback:</span><br><span class="line">    - &#x27;tls://1.1.1.1:853&#x27;</span><br><span class="line">    - &#x27;tcp://1.1.1.1:53&#x27;</span><br><span class="line">    - &#x27;tcp://208.67.222.222:443&#x27;</span><br><span class="line">    - &#x27;tls://dns.google&#x27;</span><br></pre></td></tr></table></figure><h2 id="自动更新yaml文件"><a href="#自动更新yaml文件" class="headerlink" title="自动更新yaml文件"></a>自动更新yaml文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">curl -o /home/Clash/clash.yaml https://apiv1.v27qae.com/flydsubal/ht49bjwrnwxoqmsn?clash=1&amp;extend=1</span><br><span class="line">docker restart clash</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O config.yaml https://apiv1.v27qae.com/flydsubal/ht49bjwrnwxoqmsn?clash=1&amp;extend=1</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o config.yaml https://apiv1.v27qae.com/flydsubal/ht49bjwrnwxoqmsn?clash=1&amp;extend=1</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">119.34.178.193</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Clash&quot;&gt;&lt;a href=&quot;#Clash&quot; class=&quot;headerlink&quot; title=&quot;Clash&quot;&gt;&lt;/a&gt;Clash&lt;/h1&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>事业单位</title>
